@@ -1,0 +1,31 @@
+<div class="container-fluid col-6 mt-lg-4" style="background-color:white;border:5px solid black">
+<div class="text-center">
+  <h1 class="justify-content-center">Register</h1>
+    <% if @user.errors.any? %>
+  <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %>
+        <% end %>
+    </ul>
+  <% end %>
+  <%= form_with(model: @user,class: "shadow p-3 mb-2 rounded")do |form| %>
+    <div class="txt_field"
+      <%= form.label :UserName %><br>
+      <%= form.text_field :username %>
+    </div>
+  
+    <div class="txt_field">
+      <%= form.label :Email %><br>
+      <%= form.email_field :email %>
+    </div>
+    <div class="txt_field">
+      <%= form.label :Password %><br>
+      <%= form.text_field :password%>
+    </div>
+    
+    <div>
+      <br/><%= form.submit "Sign Up" %>
+    </div>
+  <% end %>
+</div>
+</div>

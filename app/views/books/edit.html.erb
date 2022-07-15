@@ -1,0 +1,24 @@
+<h1>Edit Books</h1>
+</br>
+<%= form_with model: @book, method: :patch, url: author_book_path(@author, @book), local: true do |form| %>
+  <div>
+    <%= form.label :Book_name %><br>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :Content%><br>
+    <%= form.text_field :content%>
+  </div>
+  <div>
+    <%= form.label :Genre%><br>
+    <%= form.text_field :genre%>
+  </div>
+  <div>
+    <%= form.label :Year_Published%><br>
+    <%= form.text_field :published%>
+  </div>
+  </br>
+  <div>
+    <%= form.submit "Edit" %>
+  </div>
+<% end %>

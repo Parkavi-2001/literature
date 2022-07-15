@@ -1,0 +1,20 @@
+<h1>Edit Authors</h1>
+</br>
+<%= form_with(model:@author,local: true) do |form| %>
+  <div>
+    <%= form.label :Author_name %><br>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :Country%><br>
+    <%= form.text_field :country%>
+  </div>
+  <div>
+    <%= form.label :Awards%><br>
+    <%= form.text_field :awards%>
+  </div>
+  </br>
+  <div>
+    <%= form.submit "Create" %>
+  </div>
+<% end %>

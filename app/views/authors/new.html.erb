@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.author{
+    text-align:center;
+    background:url('/assets/author.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+</style>
+</head>
+<body>
+<%= form_with(model:@author,local: true) do |form| %>
+  <h2>Author</h2>
+  <div>
+    <%= form.label :Author_name %><br>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :Country%><br>
+    <%= form.text_field :country%>
+  </div>
+  <div>
+    <%= form.label :Awards%><br>
+    <%= form.text_field :awards%>
+  </div>
+  </br>
+  <div>
+    <%= form.submit "Create" %>
+  </div>
+<% end %>
+
+
+
+
+<!-- 
+# </br>
+# <div>
+#   <label for="name" class="form-label">Author Name</label>
+#   <input type="text" class="form-control" id="name">
+# </div>
+# <div>
+#   <label for="book" class="form-label">Country</label>
+#   <input type="text" class="form-control" id="book" >
+# </div>
+# <div>
+#   <label for="genre" class="form-label">Awards</label>
+#   <input type="text" class="form-control" id="genre">
+# </div>
+# </br>
+# <button type="submit" class="btn btn-primary">Submit</button>
+# </div>-->
+
+
+</body>
+</html>

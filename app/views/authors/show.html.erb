@@ -1,0 +1,31 @@
+    <h1>Books</h1>
+    <%= link_to "New",new_author_book_path(@author) %>
+
+<table class="table table-secondary">
+  <thead>
+    <tr>
+      <th scope="col">No.</th>
+      <th scope="col">Name</th>
+      <th scope="col">Content</th>
+      <th scope="col">Genre</th>
+      <th scope="col">Published</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <% @books.each do |book| %>
+      <tr>
+      <td><%= book.id %></td>
+      <td><%=book.name %></td>
+      <td><%=book.content %></td>
+      <td><%=book.genre %></td>
+      <td><%=book.published %></td>
+      <td><%=link_to "Edit", edit_author_book_path(@author, book)%></td>
+      <td><%=button_to "Delete",author_book_path(@author, book), method: :delete%></td>
+      </tr>
+      <% end %>
+</tbody>
+</table>
+      
